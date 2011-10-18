@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>FarOutFowl</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <link href="game.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+  <table class="playfield">
+  </table>
+
+  <script>
+
+  var PlayFieldModel = function() {
+
+    this.data = {};
+    this.cols = 0;
+    this.rows = 0;
+
+    this.init = function() {
+
+    }
+
+    this.setData = function(data) {
+      fields = data.split("\n");
+      console.log(data);
+
+      for (var y = 1; y <= fields.length; y++)
+      {
+        for (var x = 1; x <= fields[y-1].length; x++)
+        {
+          if (!this.data[x])
+            this.data[x] = {};
+
+          this.data[x][y] = fields[y-1][x-1];
+        }
+      }
+
+      /* the last values are the highest */
+      this.cols = x-1;
+      this.rows = y-1;
+
+      console.log(this.data);
+    }
+
+    this.getColHeaders = function() {
+      var result = {};
+
+      for (var x = 1; x <= this.cols; x++)
+      {
+        result[x] = [];
+
+        var startNew = true;
+        var current = 0;
+        for (var y = 1; y <= this.rows; y++)
+        {
+          if (this.data[x][y] == 'x')
+            current = current + 1;
+
+          if (this.data[x][y] != 'x' && current > 0)
+            result[x].push(current);
+        }
+        if (current > 0)
+          result[x].push(current);
+      }
+
+      console.log(result);
+    }
+
+    this.getRowHeader = function() {
+
+    }
+
+    this.checkField = function() {
+
+    }
+
+    this.init();
+  }
+
+  var PlayField = function(element, model) {
+    this.element = element;
+    this.model = model;
+
+    this.init = function() {
+
+    }
+
+    this.draw = function() {
+
+    }
+
+    this.init();
+  }
+
+  </script>
+
+  <script>
+     var data = "xxxxx\nxxxxx\nx   x\nx   x\nxxxxx";
+
+     var pfm = new PlayFieldModel();
+     pfm.setData(data);
+
+     console.log(pfm.getColHeaders());
+     //console.log(pfm.getRowHeaders());
+
+     var pf = new PlayField($('.field'), pfm);
+     pf.draw();
+
+  </script>
+
+</body>
+</html>
