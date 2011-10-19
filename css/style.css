@@ -1,0 +1,202 @@
+   body {
+     -webkit-user-select: none;
+     -khtml-user-select: none;
+     -moz-user-select: none;
+     -o-user-select: none;
+     user-select: none;
+     -webkit-user-drag: none;
+
+     background-repeat: no-repeat;
+
+     padding: 0px;
+     margin: 0px;
+     cursor: default;
+   }
+
+
+   body.index {
+     background-image: url('../images/indexbg.png');
+   }
+
+   body.puzzle {
+     background-image: url('../images/playfieldbg.png');
+   }
+
+   .previewlist  {
+     padding: 20px;
+   }
+
+   .previewlist h1 {
+     font-family: arial;
+     color: white;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   .puzzle.preview {
+     float: left;
+     width: 120px;
+     height: 140px;
+     padding: 6px;
+     margin-right: 20px;
+     margin-bottom: 20px;
+     color: white;
+     font-family: arial;
+     font-weight: bold;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   .puzzle.preview canvas {
+     border: 2px solid gray;
+     background-color: white;
+     cursor: pointer;
+   }
+
+   .puzzle.preview.unsolved canvas {
+     background-image: url('../icon.png');
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-color: #e3e3e3;
+   }
+
+
+   .content {
+     width: 1024px;
+     height: 732px; /* 768px*/
+
+     position: relative;
+   }
+
+   body.puzzle .content {
+     display: table-cell;
+     vertical-align: middle;
+   }
+
+   body.puzzle .layer.solved {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 1024px;
+     height: 768px;
+     background-image: url('../images/solved.png');
+     background-repeat: no-repeat;
+     background-position: top center;
+   }
+
+   body.puzzle .backbutton {
+     position: absolute;
+     top: 30px;
+     left: 30px;
+     font-family: arial;
+     color: white;
+     text-shadow: 1px 1px 1px #000;
+     font-size: 30px;
+     cursor: pointer;
+   }
+
+   .playfield {
+     border-right: 1px solid black;
+     border-bottom: 1px solid black;
+     font-family: arial;
+     margin: auto;
+   }
+
+   .playfield td {
+     border-left: 1px solid black;
+     border-top: 1px solid black;
+     padding: 4px;
+     vertical-align: bottom;
+     text-align: right;
+     height: 20px;
+     width: 20px;
+     background-color: white;
+     cursor: pointer;
+   }
+
+   .playfield .header {
+     background-color: #FFFF99;
+     width: auto;
+     height: auto;
+     letter-spacing: -2px;
+   }
+
+   .playfield .header.done{
+     color: green;
+   }
+
+   .playfield .fifthx {
+     border-right: 2px solid black;
+   }
+
+   .playfield .fifthy {
+     border-bottom: 2px solid black;
+   }
+
+
+   .playfield .empty {
+     background-color: white;
+   }
+
+   .playfield .checked {
+     background-color: green;
+   }
+
+   .playfield .marked {
+     background-image: url('../images/marked.png');
+   }
+
+   .playfield .mistake {
+     background-image: url('../images/mistake.png');
+   }
+
+
+   .playfield.solved {
+     border-color: gray;
+   }
+
+   .playfield.solved td {
+     border-color: gray;
+   }
+
+   .playfield.solved .checked {
+     background-color: green;
+   }
+
+   .playfield.solved .mistake, .playfield.solved .marked {
+     background-color: white;
+     background-image: url();
+   }
+
+   .modeswitch {
+     margin-top: 10px;
+     font-family: arial;
+     font-size: 14px;
+     color: gray;
+     position: absolute;
+
+     width: 90px;
+     left: 120px;
+     top: 200px;
+   }
+
+   .modeswitch .button {
+     width: 85px;
+     height: 85px;
+     margin-bottom: 20px;
+     cursor: pointer;
+   }
+
+   .modeswitch .check.active {
+     background-image: url('../images/fill.png');
+   }
+
+   .modeswitch .check {
+     background-image: url('../images/fill_inactive.png');
+   }
+
+   .modeswitch .mark.active {
+     background-image: url('../images/mark.png');
+   }
+
+   .modeswitch .mark {
+     background-image: url('../images/mark_inactive.png');
+   }
