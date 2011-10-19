@@ -1,9 +1,2 @@
 enyo.depends(
-     "images/bg.png",
-     "images/fill_inactive.png",
-     "images/fill.png",
-     "images/marked.png",
-     "images/mark_inactive.png",
-     "images/mark.png",
-     "images/mistake.png"
 );

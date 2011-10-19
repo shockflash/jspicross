@@ -3,7 +3,8 @@
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-  <title>FarOutFowl</title>
+  <title>Touch Picross</title>
+  <script src="../../../enyo/0.10/framework/enyo.js" type="text/javascript"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 
@@ -157,7 +158,13 @@
   </div>
 
   <script>
+  if (enyo) 
+  {
+    enyo.setFullScreen(true);
+  }
+  </script>
 
+  <script>
   /**
    * Used as event manager in all classes. Every class has an own instance
    * of it. Accepts only events that are given on init.
@@ -887,16 +894,7 @@
 
      var data = "xxxxx\nxx xx\nx x x\nx x x\nxxxxx";
 
-     var data =    "x        x\n";
-     data = data + "x   x    x\n";
-     data = data + "x   x    x\n";
-     data = data + "x   x     \n";
-     data = data + "x   x    x\n";
-     data = data + "x        x\n";
-     data = data + "x         \n";
-     data = data + "x        x\n";
-     data = data + "x        x\n";
-     data = data + "x        x";
+
 
 
 
@@ -919,6 +917,17 @@
      data = data + "xxxxx xxx xxxxx\n";
      data = data + "xxxxxxx    xxxx";
 
+
+     var data =    "x        x\n";
+     data = data + "x   x    x\n";
+     data = data + "x   x    x\n";
+     data = data + "x   x     \n";
+     data = data + "x   x    x\n";
+     data = data + "x        x\n";
+     data = data + "x         \n";
+     data = data + "x        x\n";
+     data = data + "x        x\n";
+     data = data + "x        x";
 
 
      var pfm = new PlayFieldModel();
