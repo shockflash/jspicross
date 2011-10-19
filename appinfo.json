@@ -1,0 +1,9 @@
+{
+     "id": "com.haxlom.touchpicross",
+     "uiRevision": 2,
+     "version": "1.0.0",
+     "vendor": "HP",
+     "type": "web",
+     "main": "index.html",
+     "title": "Touch Picross Season 1"
+}

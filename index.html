@@ -8,17 +8,36 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 
   <style>
-   .playfield {
-     border-right: 1px solid black;
-     border-bottom: 1px solid black;
-     font-family: arial;
-
+   body {
      -webkit-user-select: none;
      -khtml-user-select: none;
      -moz-user-select: none;
      -o-user-select: none;
      user-select: none;
      -webkit-user-drag: none;
+
+     background-image: url('images/bg.png');
+     background-repeat: no-repeat;
+
+     padding: 0px;
+     margin: 0px;
+   }
+
+   .content {
+     width: 1024px;
+     height: 732px; /* 768px*/
+
+     position: relative;
+
+     display: table-cell;
+     vertical-align: middle;
+   }
+
+   .playfield {
+     border-right: 1px solid black;
+     border-bottom: 1px solid black;
+     font-family: arial;
+     margin: auto;
    }
 
    .playfield td {
@@ -29,6 +48,7 @@
      text-align: right;
      height: 20px;
      width: 20px;
+     background-color: white;
    }
 
    .playfield .header {
@@ -60,11 +80,11 @@
    }
 
    .playfield .marked {
-     background-color: #66FFCC;
+     background-image: url('images/marked.png');
    }
 
    .playfield .mistake {
-     background-color: red;
+     background-image: url('images/mistake.png');
    }
 
 
@@ -82,33 +102,58 @@
 
    .playfield.solved .mistake, .playfield.solved .marked {
      background-color: white;
+     background-image: url();
    }
-
 
    .modeswitch {
      margin-top: 10px;
      font-family: arial;
      font-size: 14px;
      color: gray;
+     position: absolute;
+
+     width: 90px;
+     left: 120px;
+     top: 200px;
    }
 
-   .modeswitch .active {
-     font-weight: bold;
-     font-size: 16px;
-     color: black;
+   .modeswitch .button {
+     width: 85px;
+     height: 85px;
+     margin-bottom: 20px;
    }
+
+   .modeswitch .check.active {
+     background-image: url('images/fill.png');
+   }
+
+   .modeswitch .check {
+     background-image: url('images/fill_inactive.png');
+   }
+
+   .modeswitch .mark.active {
+     background-image: url('images/mark.png');
+   }
+
+   .modeswitch .mark {
+     background-image: url('images/mark_inactive.png');
+   }
+
+
 
   </style>
 
 </head>
 <body>
 
-  <table class="playfield" cellpadding="0" cellspacing="0">
-  </table>
+  <div class="content">
+    <table class="playfield" cellpadding="0" cellspacing="0">
+    </table>
 
-  <div class="modeswitch">
-    <span class="active check">Check</span>
-    <span class="mark">Mark</span>
+    <div class="modeswitch">
+      <div class="button active check"></div>
+      <div class="button mark">k</div>
+    </div>
   </div>
 
   <script>
@@ -237,6 +282,7 @@
     this.rowCount = 0;
 
     this.solved = false;
+    this.failed = false;
 
     /* how many fields are filled */
     this.filledCount = 0;
@@ -248,6 +294,8 @@
 
     this.events = new EventManager(this, [
         'onSolved',
+        'onFailed',
+        'onMistake'
       ])
 
     /* FUNCTIONS */
@@ -289,6 +337,17 @@
 
     this.isSolved = function() {
       return this.solved;
+    }
+
+    this.isFailed = function() {
+      return this.failed;
+    }
+
+    this.setFailed = function(value) {
+      this.failed = value;
+
+      if (!value)
+        this.trigger('onFailed');
     }
 
 
@@ -361,15 +420,18 @@
 
 
     /**
-     * React on the check of a field. Count mistakes
+     * React on the check of a field.
      */
     this.handleOnChecked = function(fieldModel) {
       if (fieldModel.isFilled())
         this.checkedFilledCount = this.checkedFilledCount + 1;
 
+      if (!fieldModel.isFilled())
+        this.events.trigger('onMistake', fieldModel);
+
       if (this.checkedFilledCount == this.filledCount)
       {
-        this.solved = true;;
+        this.solved = true;
         this.events.trigger('onSolved');
       }
     }
@@ -453,8 +515,8 @@
     }
 
     this.handleClick = function(event) {
-      /* ignore any further clicks if playfield is solved */
-      if (this.playfield.getModel().isSolved())
+      /* ignore any further clicks if playfield is solved or failed*/
+      if (this.playfield.getModel().isSolved() || this.playfield.getModel().isFailed())
         return;
 
       if (this.playfield.getMode() == 'check')
@@ -565,6 +627,9 @@
   }
 
   var PlayField = function(element, model) {
+
+    /* VARS */
+
     this.element = element;
     this.model = model;
     this.fields = {};
@@ -583,6 +648,9 @@
          'set' = set marks
        */
     this.dragMarkMode = '';
+
+
+    /* FUNCTIONS */
 
     this.init = function() {
       var self = this;
@@ -626,7 +694,7 @@
       var rowHeader = this.model.getRowHeaders();
 
       /* first we draw the col headers */
-      var row = $('<tr><td></td></tr>');
+      var row = $('<tr><td><span class="timer"></span></td></tr>');
       for (var i = 1; i <= this.model.getColCount(); i++)
       {
         var td = $('<td>' + colHeader[i].join('<br>') + '</td>');
@@ -691,14 +759,133 @@
     this.init();
   }
 
+  var TimerModel = function(playFieldModel) {
+
+    /* VARS */
+
+    this.playFieldModel = playFieldModel;
+    this.maxTime = (60*30);
+    this.time = 0;
+    this.mistakeTime = 5;
+
+    /* EVENTS */
+
+    this.events = new EventManager(this, [
+        'onTime',
+        'onTimeout',
+      ])
+
+    /* FUNCTIONS */
+
+    this.init = function() {
+      var self = this;
+
+      /* event listeners */
+
+      window.setTimeout(function() {
+        self.onTime();
+      }, 1000);
+
+      this.playFieldModel.events.bind('onMistake', function() {
+        self.handleOnMistake();
+      });
+
+
+    }
+
+    this.onTime = function() {
+      this.time = this.time + 1;
+
+      this.events.trigger('onTime', this.time);
+
+      var self = this;
+      window.setTimeout(function() {
+        self.onTime();
+      }, 1000);
+    }
+
+    this.handleOnMistake = function() {
+      this.mistakeTime = this.mistakeTime * 2;
+
+      this.time = this.time + this.mistakeTime;
+      this.events.trigger('onTime', this.time);
+
+
+
+      if (this.maxTime < this.time) {
+        this.playFieldModel.setFailed(true);
+        this.events.trigger('onTimeout', this.time);
+      }
+    }
+
+    this.init();
+
+  }
+
+  var Timer = function(element, model, playFieldModel) {
+    this.element = element;
+    this.model = model;
+    this.playFieldModel = playFieldModel;
+    this.active = true;
+
+    /* FUNCTIONS */
+
+    this.init = function() {
+      var self = this;
+
+      /* event listeners */
+
+      this.model.events.bind('onTime', function(event, sender, time) {
+        self.handleOnTime(time);
+      });
+
+      this.model.events.bind('onTimeout', function(event, sender, time) {
+        self.handleOnTimeOut(time);
+      });
+
+      this.playFieldModel.events.bind('onSolved', function(event, sender, time) {
+        self.active = false;
+      });
+
+      /* init timer design */
+      this.handleOnTime(0);
+    }
+
+    this.getHumanReadable = function(time) {
+      var seconds = time % 60
+      var rest = time / 60;
+      var minutes = Math.floor(rest % 60)
+
+      if (seconds < 10)
+        seconds = '0' + seconds
+      return minutes + ':' + seconds;
+    }
+
+    this.handleOnTime = function(time) {
+      if (this.active)
+        this.element.html('Time: ' + this.getHumanReadable(time));
+    }
+
+    this.handleOnTimeOut = function(time) {
+      this.active = false;
+      this.element.html('YOU LOST! (' + this.getHumanReadable(time) + ')');
+    }
+
+
+    this.init();
+
+  }
+
   </script>
 
   <script>
 
 
+
+
+
+
      var data = "xxxxx\nxx xx\nx x x\nx x x\nxxxxx";
-
-
 
      var data =    "x        x\n";
      data = data + "x   x    x\n";
@@ -713,23 +900,24 @@
 
 
 
-     var data =    "xxxxxxxxxxxxxxx\n";
+
+     var data =    "               \n";
      data = data + "xxxxx xxx xxxxx\n";
-     data = data + "x            xx\n";
-     data = data + "x             x\n";
+     data = data + "x    x       xx\n";
+     data = data + "x    x        x\n";
      data = data + "xxxxxxxxxxxxxxx\n";
 
-     data = data + "xxxxxxxxxxxxxxx\n";
+     data = data + "     xxxxx  xxx\n";
      data = data + "xxx x xxx xxxxx\n";
      data = data + "xxxxx xxx xxxxx\n";
-     data = data + "xxxxx xxx x   x\n";
+     data = data + "x  xx xxx x   x\n";
      data = data + "xxxxxxxxxxxxxxx\n";
 
      data = data + "xxxxxxxxxxxxxxx\n";
-     data = data + "xx        xxxxx\n";
+     data = data + "xx  xxx   xxxxx\n";
      data = data + "xxxxx xxx    xx\n";
      data = data + "xxxxx xxx xxxxx\n";
-     data = data + "xxxxxxxxxxxxxxx";
+     data = data + "xxxxxxx    xxxx";
 
 
 
@@ -744,19 +932,23 @@
          }, 100);
      });
 
+     var tm = new TimerModel(pfm);
+
      var pf = new PlayField($('.playfield'), pfm);
      pf.draw();
 
+     var timer = new Timer($('.timer'), tm, pfm);
+
      $('.modeswitch .mark').click(function() {
-       $(this).toggleClass('active');
-       $('.modeswitch .check').toggleClass('active');
+       $(this).addClass('active');
+       $('.modeswitch .check').removeClass('active');
 
       pf.setMode('mark');
      });
 
      $('.modeswitch .check').click(function() {
-       $(this).toggleClass('active');
-       $('.modeswitch .mark').toggleClass('active');
+       $(this).addClass('active');
+       $('.modeswitch .mark').removeClass('active');
 
       pf.setMode('check');
      });
