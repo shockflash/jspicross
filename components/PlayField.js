@@ -30,11 +30,6 @@
         self.handleOnSolved();
       });
 
-      element.mousedown(function() {
-        self.dragMarkMode = '';
-        self.drag = true;
-      });
-
       element.mouseleave(function() {
         self.drag = false;
         self.dragMarkMode = '';
@@ -44,6 +39,15 @@
         self.drag = false;
         self.dragMarkMode = '';
       });
+    }
+
+    /* Called by a field when mouse down is called.
+       Since the field is called first, but the playfield must react first,
+       the field informs the playfield, instead of an own mousedown event
+       listener in the playfield */
+    this.startMouseDown = function() {
+      this.dragMarkMode = '';
+      this.drag = true;
     }
 
     this.getDrag = function() {

@@ -36,17 +36,15 @@
         self.handleOnMarked(model, value);
       });
 
-      element.click(function(event) {
-        self.handleClick(event);
-      });
-
       element.mousedown(function(event) {
+        /* see doc-comment of startMouseDown to understand what is done here */
+        self.playfield.startMouseDown();
         self.handleClick(event);
       });
 
       element.mousemove(function(event) {
         if (self.playfield.getDrag())
-          self.handleClick(event);
+          self.handleClick();
       });
     }
 
@@ -77,7 +75,7 @@
         this.element.addClass('empty');
     }
 
-    this.handleClick = function(event) {
+    this.handleClick = function() {
       /* ignore any further clicks if playfield is solved or failed*/
       if (this.playfield.getModel().isSolved() || this.playfield.getModel().isFailed())
         return;
