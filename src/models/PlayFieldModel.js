@@ -32,7 +32,7 @@
     this.setData = function(data) {
       var self = this;
 
-      fields = data.split("\n");
+      fields = data.split("|");
 
       for (var y = 1; y <= fields.length; y++)
       {

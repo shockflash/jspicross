@@ -4,7 +4,7 @@ var PuzzleModel = function(index, data) {
   this.data = data;
 
   this.init = function() {
-    this.field = this.data['field'].split("\n");
+    this.field = this.data['field'].split("|");
   }
 
   this.getData = function() {

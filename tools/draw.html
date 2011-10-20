@@ -1,0 +1,96 @@
+<hml>
+<head>
+  <script type="text/javascript" src="../src/libs/vendor/jquery.min.js"></script>
+</head>
+<body>
+
+  <table class="field" border="1px" cellpadding="0" cellspacing="0">
+  </table>
+  <br>
+  Result: <input type="text" class="result" style="width: 300px"><br>
+  <br>
+  Fieldsize: <span class="field5">5x5</span> | <span class="field10">10x10</span> | <span class="field15">15x15</span> |  <span class="field2015">20x15</span>
+
+  <script>
+    function draw(xMax, yMax) {
+      var table = $('.field');
+      table.data('x', xMax);
+      table.data('y', yMax);
+
+      table.html('');
+      for (var x = 1; x <= xMax; x++)  
+      {
+        var tr = $('<tr></tr>');   
+
+        for (var y = 1; y <= yMax; y++)
+        {
+          var td = $('<td width="20px" height="20px"></td>');
+          td.data('x', x);
+          td.data('y', y);
+          tr.append(td);
+
+          td.click(function() {
+            if ($(this).data('set'))
+            {
+              $(this).css('backgroundColor', 'white');
+              $(this).data('set', false);
+            } else {
+              $(this).css('backgroundColor', 'black');
+              $(this).data('set', true);
+            }
+            calcResult();
+          });
+        }
+        table.append(tr);
+      }
+
+    }
+
+    function calcResult() {
+      var table = $('.field');
+
+      var fields = {};
+
+      $('td', table).each(function(index) {
+        var t = $(this);
+        var x = t.data('x');
+        var y = t.data('y');
+
+        if (!fields[x])
+          fields[x] = [];
+
+        fields[x][y] = 'x';
+        if (!t.data('set'))
+          fields[x][y] = ' ';
+      });
+
+      var str = '';
+      $.each(fields, function(key, value) {
+        str = str + value.join('') + "|";
+      });
+      str = str.substr(0, str.length-1);
+
+      $('.result').val(str);
+    }
+
+    $('.field5').click(function(){
+      draw(5, 5);
+    });
+
+    $('.field10').click(function(){
+      draw(10, 10);
+    });
+
+    $('.field15').click(function(){
+      draw(15, 15);
+    });
+
+    $('.field2015').click(function(){
+      draw(20, 15);
+    });
+
+    draw(15, 15);
+  </script>
+
+</body>
+<html>
