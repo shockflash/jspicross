@@ -8,8 +8,10 @@ var PuzzlePreview = function(parent, model) {
     this.model = model;
 
     /* size of the canvas. Not part of the css, since we need to calc with this
-       value*/
-    this.size = 120;
+       value. Other sizes:
+
+       */
+    this.size = 90;
 
     /* EVENTS */
 
@@ -20,7 +22,7 @@ var PuzzlePreview = function(parent, model) {
     /* FUNCTIONS */
 
     this.init = function() {
-      this.element = $('<div class="puzzle preview"><div class="title">Unsolved</div></div>');
+      this.element = $('<div class="puzzle preview"><div class="title">' + $.i18n._('unsolved') + '</div></div>');
       this.parent.append(this.element);
 
       this.canvas = $('<canvas width="' + this.size + '" height="' + this.size + '"></canvas>');
@@ -33,7 +35,8 @@ var PuzzlePreview = function(parent, model) {
 
       if (this.model.isSolved())
       {
-        $('.title', this.element).html(this.model.getData().title);
+        var title = 'title_' + $.i18n.getLanguage();
+        $('.title', this.element).html(this.model.getData()[title]);
         this.draw();
       } else {
         this.element.addClass('unsolved');

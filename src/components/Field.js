@@ -61,8 +61,10 @@
       if (model.isFilled())
       {
         this.element.addClass('checked');
+        new Sound('filled');
       } else {
         this.element.addClass('mistake');
+        new Sound('error');
       }
     }
 
@@ -70,9 +72,13 @@
       this.element.removeClass('empty marked');
 
       if (value)
+      {
         this.element.addClass('marked');
-      else
+        new Sound('marked');
+      } else {
         this.element.addClass('empty');
+        new Sound('unmark');
+      }
     }
 
     this.handleClick = function() {

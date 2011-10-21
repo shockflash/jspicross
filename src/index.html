@@ -6,10 +6,13 @@
   <title>Touch Picross</title>
   <script src="../../../enyo/0.10/framework/enyo.js" type="text/javascript"></script>
   <script src="libs/vendor/jquery.min.js"></script>
+  <script src="libs/vendor/jquery-ui.min.js"></script>
+  <script src="libs/vendor/jquery.i18n.js"></script>
 
   <script src="libs/EventManager.js"></script>
   <script src="libs/Main.js"></script>
   <script src="libs/Cookie.js"></script>
+  <script src="libs/Sound.js"></script>
 
   <script src="models/PuzzleModel.js"></script>
   <script src="models/PuzzleListModel.js"></script>
@@ -24,17 +27,21 @@
   <script src="components/Timer.js"></script>
   <script src="components/PlayField.js"></script>
 
-  <script src="controllers/IndexController.js"></script>
+  <script src="controllers/HowToPlayController.js"></script>
+  <script src="controllers/IntroController.js"></script>
+  <script src="controllers/LanguageController.js"></script>
+  <script src="controllers/MoreController.js"></script>
+  <script src="controllers/ListController.js"></script>
   <script src="controllers/PuzzleController.js"></script>
 
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="index">
 
-  <div class="content">
-
-
+  <div class="main">
   </div>
+
+
 
   <script>
     /* in an own script to prevent errors stopping the rest of the script*/
@@ -44,7 +51,10 @@
 
   <script>
     var main = new Main();
-    main.switchController(IndexController);
+    main.switchController(IntroController, 'left');
+
+    var songs = new Sound();
+    songs.preload(['marked', 'filled', 'solved', 'failed', 'unmark', 'error']);
   </script>
 
 </body>

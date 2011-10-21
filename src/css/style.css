@@ -11,15 +11,8 @@
      padding: 0px;
      margin: 0px;
      cursor: default;
-   }
 
-
-   body.index {
      background-image: url('../images/indexbg.png');
-   }
-
-   body.puzzle {
-     background-image: url('../images/playfieldbg.png');
    }
 
    .previewlist  {
@@ -34,10 +27,10 @@
 
    .puzzle.preview {
      float: left;
-     width: 120px;
-     height: 140px;
+     width: 110px;
+     height: 110px;
      padding: 6px;
-     margin-right: 20px;
+     margin-right: 10px;
      margin-bottom: 20px;
      color: white;
      font-family: arial;
@@ -58,40 +51,154 @@
      background-color: #e3e3e3;
    }
 
+   .main {
+      width: 1024px;
+      height: 768px;
+      overflow: hidden;
+      position: relative;
+   }
 
    .content {
      width: 1024px;
-     height: 732px; /* 768px*/
+     height: 768px;
 
      position: relative;
    }
 
-   body.puzzle .content {
+   .content.intro {
+     background-image: url('../images/intro.png');
+   }
+
+   .content.puzzle .center {
+     width: 1024px;
+     height: 768px;
      display: table-cell;
      vertical-align: middle;
    }
 
-   body.puzzle .layer.solved {
+   .content.puzzle .layer.solved {
      position: absolute;
      left: 0;
      top: 0;
      width: 1024px;
      height: 768px;
-     background-image: url('../images/solved.png');
      background-repeat: no-repeat;
      background-position: top center;
    }
 
-   body.puzzle .backbutton {
+   .content.puzzle .layer.solved.de {
+     background-image: url('../images/de/solved.png');
+   }
+
+   .content.puzzle .layer.solved.en{
+     background-image: url('../images/en/solved.png');
+   }
+
+   .content.puzzle .layer.failed {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 1024px;
+     height: 768px;
+     background-repeat: no-repeat;
+     background-position: top center;
+   }
+
+   .content.puzzle .layer.failed.de {
+     background-image: url('../images/de/failed.png');
+   }
+
+   .content.puzzle .layer.failed.en {
+     background-image: url('../images/en/failed.png');
+   }
+
+   .content .backbutton {
      position: absolute;
      top: 30px;
      left: 30px;
-     font-family: arial;
-     color: white;
-     text-shadow: 1px 1px 1px #000;
      font-size: 30px;
      cursor: pointer;
+     width: 150px;
+     height: 80px;
    }
+
+   .content .backbutton.de {
+     background-image: url('../images/de/back.png');
+   }
+
+   .content .backbutton.en {
+     background-image: url('../images/en/back.png');
+   }
+
+   .content.more p {
+     border: 1px solid black;
+     position: absolute;
+     left: 20px;
+     top: 100px;
+     right: 20px;
+     bottom: 20px;
+     background-color: black;
+     padding: 20px;
+     color: white;
+   }
+
+   .content.language .selectlang {
+     color: white;
+     font-weight: bold;
+     font-family: arial;
+     font-size: 40px;
+     position: absolute;
+     top: 60px;
+     left: 200px;
+   }
+
+   .content.language .list {
+     position: absolute;
+     left: 200px;
+     top: 100px;
+     color: white;
+     font-family: arial;
+     font-size: 60px;
+     list-style-type: none;
+   }
+
+   .content.language .list li {
+      margin-bottom: 20px;
+      border: 1px solid gray;
+      background-color: brown;
+      padding: 6px;
+   }
+
+   .content.index .morelink {
+     position: absolute;
+     color: white;
+     font-size: 30px;
+     font-weight: bold;
+     font-family: arial;
+     right: 10px;
+     bottom: 10px;
+   }
+
+   .content.index .languagelink {
+     position: absolute;
+     color: white;
+     font-size: 30px;
+     font-weight: bold;
+     font-family: arial;
+     left: 10px;
+     bottom: 10px;
+   }
+
+   .content.index .howtoplaylink {
+     position: absolute;
+     color: white;
+     font-size: 30px;
+     font-weight: bold;
+     font-family: arial;
+     right: 10px;
+     top: 10px;
+   }
+
 
    .playfield {
      border-right: 1px solid black;
@@ -117,6 +224,7 @@
      width: auto;
      height: auto;
      letter-spacing: -2px;
+     font-size: 14px;
    }
 
    .playfield .header.done{
@@ -133,19 +241,19 @@
 
 
    .playfield .empty {
-     background-color: white;
+     background-image: url('../images/block_empty.png');
    }
 
    .playfield .checked {
-     background-color: green;
+     background-image: url('../images/block_filled.png');
    }
 
    .playfield .marked {
-     background-image: url('../images/marked.png');
+     background-image: url('../images/block_marked.png');
    }
 
    .playfield .mistake {
-     background-image: url('../images/mistake.png');
+     background-image: url('../images/block_mistake.png');
    }
 
 
@@ -162,8 +270,7 @@
    }
 
    .playfield.solved .mistake, .playfield.solved .marked {
-     background-color: white;
-     background-image: url();
+     background-image: url('../images/block_empty.png');
    }
 
    .modeswitch {

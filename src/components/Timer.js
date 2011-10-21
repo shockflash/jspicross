@@ -41,14 +41,12 @@
 
     this.handleOnTime = function(time) {
       if (this.active)
-        this.element.html('Time: ' + this.getHumanReadable(time));
+        this.element.html($.i18n._('time') + ':<br> ' + this.getHumanReadable(time));
     }
 
     this.handleOnTimeOut = function(time) {
       this.active = false;
-      this.element.html('YOU LOST! (' + this.getHumanReadable(time) + ')');
     }
-
 
     this.init();
 

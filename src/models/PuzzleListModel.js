@@ -18,7 +18,10 @@ var PuzzleListModel = function() {
         })
 
         callback(self.list);
-    })
+    }).error(function(error) {
+      alert('Error');
+      console.log(error);
+    });
   }
 
   this.init();

@@ -71,8 +71,8 @@
     this.setFailed = function(value) {
       this.failed = value;
 
-      if (!value)
-        this.trigger('onFailed');
+      if (value)
+        this.events.trigger('onFailed');
     }
 
 
