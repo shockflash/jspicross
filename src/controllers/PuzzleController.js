@@ -80,6 +80,24 @@ var PuzzleController = function(main, content, puzzle) {
       pf.setMode('check');
      });
 
+     /* show the "how-to-play" popup the first time a puzzle if opened.
+        We open it half a second after the content is drawn, to wait for the
+        animation and to make it look smoother. */
+     if (!getCookie('howtoplay')) {
+       window.setTimeout(function() {
+         var popup = new Popup($.i18n._('showhowtoplay?'));
+         popup.addButton($.i18n._('showhowtoplay_yes'), function() {
+           popup.close();
+           setCookie('howtoplay', 1);
+           self.main.switchController(HowToPlayController, 'left');
+         });
+         popup.addButton($.i18n._('showhowtoplay_no'), function() {
+           popup.close();
+           setCookie('howtoplay', 1);
+         });
+       }, 500);
+     }
+
      /* we need to launch is separate, of jquery will not call the triggered
         event. I don't now why, but without the setTimeout, the event is not
         triggered by jQuery */

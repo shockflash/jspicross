@@ -65,6 +65,32 @@
      position: relative;
    }
 
+   .popup {
+     background-color: white;
+     border: 2px solid green;
+     padding: 20px;
+     width: 310px;
+     position: absolute;
+     top: 300px;
+     left: 352px;
+     font-size: 20px;
+   }
+
+   .popup .buttons {
+     list-style-type: none;
+     padding: 0px;
+     margin: 10px 0px;
+   }
+
+   .popup .buttons li {
+     display: block;
+     width: 130px;
+     border: 1px solid red;
+     padding: 6px;
+     float: left;
+     margin-right: 10px;
+   }
+
    .content.intro {
      background-image: url('../images/intro.png');
    }
@@ -177,6 +203,7 @@
      font-family: arial;
      right: 10px;
      bottom: 10px;
+     cursor: pointer;
    }
 
    .content.index .languagelink {
@@ -187,6 +214,7 @@
      font-family: arial;
      left: 10px;
      bottom: 10px;
+     cursor: pointer;
    }
 
    .content.index .howtoplaylink {
@@ -197,6 +225,7 @@
      font-family: arial;
      right: 10px;
      top: 10px;
+     cursor: pointer;
    }
 
 
