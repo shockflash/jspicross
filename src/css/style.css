@@ -12,11 +12,12 @@
      margin: 0px;
      cursor: default;
 
-     background-image: url('../images/indexbg.png');
+     background-image: url('../images/bg.png');
    }
 
    .previewlist  {
-     margin-top: 50px;
+     margin-top: 14px;
+     margin-left: 8px;
      padding: 20px;
    }
 
@@ -25,20 +26,27 @@
      color: white;
      text-shadow: 1px 1px 1px #000;
      text-align: right;
-     margin-right: 90px;
+     margin: 32px 90px 20px 0;
+     padding: 0px;
+     line-height: 38px;
+     font-size: 32px;
    }
 
    .puzzle.preview {
      float: left;
      width: 110px;
-     height: 110px;
+     height: 148px;
      padding: 6px;
-     margin-right: 10px;
-     margin-bottom: 20px;
+     margin-right: 6px;
      color: white;
      font-family: arial;
      font-weight: bold;
      text-shadow: 1px 1px 1px #000;
+   }
+
+   .puzzle.preview .title {
+     height: 32px;
+     line-height: 32px;
    }
 
    .puzzle.preview canvas {
@@ -118,6 +126,18 @@
      color: blue;
    }
 
+   .content.puzzle.field5_5 {
+     background-image: url('../images/5_5bg.png');
+   }
+
+   .content.puzzle.field10_10 {
+     background-image: url('../images/10_10bg.png');
+   }
+
+   .content.puzzle.field15_15 {
+     background-image: url('../images/15_15bg.png');
+   }
+
    .content.puzzle .center {
      width: 1024px;
      height: 768px;
@@ -159,6 +179,18 @@
 
    .content.puzzle .layer.failed.en {
      background-image: url('../images/en/failed.png');
+   }
+
+   .content.puzzle .timer {
+     font-family: monospace;
+     position: absolute;
+     top: 32px;
+     left: 896px;
+     padding-top: 2px;
+     padding-left: 6px;
+     color: white;
+     font-size: 28px;
+     line-height: 32px;
    }
 
    .content .backbutton {
@@ -220,51 +252,82 @@
 
 
    .playfield {
-     border-right: 1px solid black;
-     border-bottom: 1px solid black;
      font-family: arial;
-     margin: auto;
+     position: absolute;
+     left: 193px;
+     top: 33px;
    }
 
    .playfield td {
-     border-left: 1px solid black;
-     border-top: 1px solid black;
-     padding: 4px;
      vertical-align: bottom;
      text-align: right;
-     height: 20px;
-     width: 20px;
-     background-color: white;
+     height: 31px;
+     width: 31px;
      cursor: pointer;
+     margin-bottom: 10px;
+     margin-right: 10px;
+
+     border-right: 1px solid #333333;
+     border-bottom: 1px solid #333333;
+   }
+
+   .playfield td.corner {
+     border: 0;
    }
 
    .playfield .header {
-     background-color: #FFFF99;
      width: auto;
      height: auto;
      letter-spacing: -2px;
-     font-size: 14px;
+     font-size: 18px;
+     color: #949494; /*#767676;*/
+
+     border-right: 0px;
+     border-bottom: 0px;
    }
 
-   .playfield .header.done{
+   .playfield .header.done {
      color: green;
    }
 
+   .playfield .header div {
+     width: 32px;
+     height: 32px;
+     text-align: center;
+     line-height: 31px;
+   }
+
+   .playfield .header.col div {
+     height: 32px;
+   }
+
+   .playfield .header.row div {
+     float: right;
+   }
+
+   .playfield .header.col {
+     height: 160px;
+   }
+
+   .playfield .header.row {
+     width: 160px;
+   }
+
    .playfield .fifthx {
-     border-right: 2px solid black;
+     border-right: 1px solid black;
    }
 
    .playfield .fifthy {
-     border-bottom: 2px solid black;
+     border-bottom: 1px solid black;
    }
 
 
    .playfield .empty {
-     background-image: url('../images/block_empty.png');
+     background-color: #444444;
    }
 
    .playfield .checked {
-     background-image: url('../images/block_filled.png');
+     background-color: #e0e0e0;
    }
 
    .playfield .marked {
@@ -275,21 +338,13 @@
      background-image: url('../images/block_mistake.png');
    }
 
-
-   .playfield.solved {
-     border-color: gray;
-   }
-
-   .playfield.solved td {
-     border-color: gray;
-   }
-
    .playfield.solved .checked {
      background-color: green;
    }
 
    .playfield.solved .mistake, .playfield.solved .marked {
-     background-image: url('../images/block_empty.png');
+     background-image: none;
+     background-color: #444444;
    }
 
    .modeswitch {
@@ -300,8 +355,8 @@
      position: absolute;
 
      width: 90px;
-     left: 120px;
-     top: 200px;
+     left: 68px;
+     top: 190px;
    }
 
    .modeswitch .button {

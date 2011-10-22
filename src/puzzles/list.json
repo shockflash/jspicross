@@ -38,9 +38,9 @@
 
 
     "7": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "xxxxxxxxxx|xxxxxxxxxx|xxxxxxxxxx|xx       x|xx x x x x|xx       x|xx x x x x|xx       x|xx x x x x|xx x     x",
+        "title_en": "Building",
+        "title_de": "Gebäuse"
     },
     "8": {
         "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",

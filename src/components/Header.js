@@ -8,7 +8,7 @@
     this.playFieldModel = playFieldModel;
 
     this.init = function() {
-      this.element.addClass('header');
+      this.element.addClass('header').addClass(this.type);
     }
 
     /**

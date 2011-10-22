@@ -47,8 +47,10 @@
 
   <script>
     /* in an own script to prevent errors stopping the rest of the script*/
-    if (enyo)
+    if (enyo) {
       enyo.setFullScreen(true);
+      enyo.setAllowedOrientation("right");
+    }
   </script>
 
   <script>

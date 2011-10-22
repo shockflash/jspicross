@@ -11,13 +11,16 @@ var PuzzleController = function(main, content, puzzle) {
 
   this.init = function() {
 
-     this.content.addClass('puzzle');
+     var fieldSizeClass = this.puzzle.getModel().getCols() + '_' + this.puzzle.getModel().getRows();
+
+     this.content.addClass('puzzle').addClass('field' + fieldSizeClass);
 
      var html = '<div class="center">' +
                 '  <table class="playfield" cellpadding="0" cellspacing="0"></table>' +
+                '  <div class="timer"></div> '+
                 '  <div class="modeswitch"> '+
-                '  <div class="button active check"></div> ' +
-                '  <div class="button mark"></div> ' +
+                '    <div class="button active check"></div> ' +
+                '    <div class="button mark"></div> ' +
                 '  </div>' +
                 '  <div class="backbutton ' + $.i18n.getLanguage() + '"></div>' +
                 '</div>';

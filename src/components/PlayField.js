@@ -70,10 +70,14 @@
       var rowHeader = this.model.getRowHeaders();
 
       /* first we draw the col headers */
-      var row = $('<tr><td><span class="timer"></span></td></tr>');
+      var row = $('<tr><td class="corner"></td></tr>');
       for (var i = 1; i <= this.model.getColCount(); i++)
       {
-        var td = $('<td>' + colHeader[i].join('<br>') + '</td>');
+        var headerData = '';
+        if (colHeader[i].length > 0)
+          headerData = '<div>' + colHeader[i].join('</div><div>') + '</div>';
+
+        var td = $('<td>' + headerData + '</td>');
         row.append(td);
         this.colHeaders[i] = new Header(td, 'col', i, this.model);
       }
@@ -86,7 +90,13 @@
         var row = $('<tr></tr>');
 
         /* the row header */
-        var td = $('<td>' + rowHeader[y].join('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') + '</td>');
+
+        var headerData = '';
+        var roeHeaderReverse = rowHeader[y].reverse(); /* need to reverse for float: right in design */
+        if (roeHeaderReverse.length > 0)
+          headerData = '<div>' + roeHeaderReverse.join('</div><div>') + '</div>';
+
+        var td = $('<td>' + headerData + '</td>');
         row.append(td);
         this.rowHeaders[y] = new Header(td, 'row', y, this.model);
 
