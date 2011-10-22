@@ -1,8 +1,10 @@
 {
   "choosepuzzle": "Wähle ein Puzzle:",
+  "puzzles": "Puzzles",
   "morepuzzles": "Mehr Puzzle",
   "changelanguage": "Sprache ändern",
   "unsolved": "Ungelöst",
+  "howtoplay": "Tutorial",
   "showhowtoplay?": "Tutorial zeigen?",
   "showhowtoplay_yes": "Tutorial zeigen",
   "showhowtoplay_no": "Nein, danke",

@@ -1,6 +1,8 @@
-var HowToPlayController = function(main, content) {
+var HowToPlayController = function(main, content, returnController, returnPuzzle) {
   this.main = main;
   this.content = content;
+  this.returnController = returnController;
+  this.returnPuzzle = returnPuzzle; /* unset if not from PuzzleController */
 
   /* EVENTS */
 
@@ -9,6 +11,8 @@ var HowToPlayController = function(main, content) {
     ])
 
   this.init = function() {
+     if (!this.returnController)
+       this.returnController = SelectController;
 
      this.content.addClass('more');
 
@@ -18,7 +22,7 @@ var HowToPlayController = function(main, content) {
 
      var self = this;
      $('.backbutton').click(function() {
-       self.main.switchController(ListController, 'right');
+       self.main.switchController(self.returnController, 'right', self.returnPuzzle);
      });
 
      /* we need to launch is separate, of jquery will not call the triggered

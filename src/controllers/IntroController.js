@@ -16,7 +16,7 @@ var IntroController = function(main, content) {
       new Sound('solved', false);
 
       if (self.main.hasLanguage())
-        self.main.switchController(ListController, 'left');
+        self.main.switchController(SelectController, 'left');
       else
         self.main.switchController(LanguageController, 'left');
     });

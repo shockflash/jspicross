@@ -27,7 +27,7 @@ var LanguageController = function(main, content) {
     var self = this;
     $('li', this.content).click(function() {
       self.main.setLanguage($(this).data('language'), function() {
-        self.main.switchController(ListController, 'left');
+        self.main.switchController(SelectController, 'left');
       });
     });
 

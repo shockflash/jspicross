@@ -16,6 +16,7 @@
    }
 
    .previewlist  {
+     margin-top: 50px;
      padding: 20px;
    }
 
@@ -23,6 +24,8 @@
      font-family: arial;
      color: white;
      text-shadow: 1px 1px 1px #000;
+     text-align: right;
+     margin-right: 90px;
    }
 
    .puzzle.preview {
@@ -93,6 +96,26 @@
 
    .content.intro {
      background-image: url('../images/intro.png');
+   }
+
+   .content.select .buttons {
+     font-size: 50px;
+     font-weight: bold;
+     color: white;
+     font-family: arial;
+     text-align: center;
+     list-style-type: none;
+     margin: 100px 0 0 0;
+     padding: 0px;
+   }
+
+   .content.select .buttons li {
+     margin-bottom: 20px;
+   }
+
+   .content.select .buttons li.list {
+     font-size: 70px;
+     color: blue;
    }
 
    .content.puzzle .center {
@@ -193,39 +216,6 @@
       border: 1px solid gray;
       background-color: brown;
       padding: 6px;
-   }
-
-   .content.index .morelink {
-     position: absolute;
-     color: white;
-     font-size: 30px;
-     font-weight: bold;
-     font-family: arial;
-     right: 10px;
-     bottom: 10px;
-     cursor: pointer;
-   }
-
-   .content.index .languagelink {
-     position: absolute;
-     color: white;
-     font-size: 30px;
-     font-weight: bold;
-     font-family: arial;
-     left: 10px;
-     bottom: 10px;
-     cursor: pointer;
-   }
-
-   .content.index .howtoplaylink {
-     position: absolute;
-     color: white;
-     font-size: 30px;
-     font-weight: bold;
-     font-family: arial;
-     right: 10px;
-     top: 10px;
-     cursor: pointer;
    }
 
 

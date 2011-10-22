@@ -24,7 +24,7 @@ var PuzzleController = function(main, content, puzzle) {
      this.content.html(html);
 
      var pfm = new PlayFieldModel();
-     pfm.setData(puzzle.getModel().getData().field);
+     pfm.setData(this.puzzle.getModel().getData().field);
 
      pfm.events.bind('onSolved', function() {
        // small delay to give the browser a change to draw the result for the  last click
@@ -89,7 +89,7 @@ var PuzzleController = function(main, content, puzzle) {
          popup.addButton($.i18n._('showhowtoplay_yes'), function() {
            popup.close();
            setCookie('howtoplay', 1);
-           self.main.switchController(HowToPlayController, 'left');
+           self.main.switchController(HowToPlayController, 'left', PuzzleController, self.puzzle);
          });
          popup.addButton($.i18n._('showhowtoplay_no'), function() {
            popup.close();

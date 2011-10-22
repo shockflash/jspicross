@@ -16,21 +16,11 @@ var ListController = function(main, content) {
     var html = '<div class="previewlist">' +
                '  <h1>' + $.i18n._('choosepuzzle') + '</h1>' +
                '</div>' +
-               '<div class="howtoplaylink">' + $.i18n._('howtoplay') + '</div>' +
-               '<div class="languagelink">' + $.i18n._('changelanguage') + '</div>' +
-               '<div class="morelink">' + $.i18n._('morepuzzles') + '</div>';
+               '<div class="backbutton ' + $.i18n.getLanguage() + '"></div>';
     this.content.html(html);
 
-    $('.howtoplaylink', this.content).click(function() {
-      self.main.switchController(HowToPlayController, 'left');
-    });
-
-    $('.morelink', this.content).click(function() {
-      self.main.switchController(MoreController, 'down');
-    });
-
-    $('.languagelink', this.content).click(function() {
-      self.main.switchController(LanguageController, 'right');
+    $('.backbutton', this.content).click(function() {
+      self.main.switchController(SelectController, 'right');
     });
 
     var pl = new PuzzleListModel();

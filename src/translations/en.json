@@ -1,8 +1,10 @@
 {
   "choosepuzzle": "Choose a puzzle:",
+  "puzzles": "Puzzles",
   "morepuzzles": "More puzzles",
   "changelanguage": "Change language",
   "unsolved": "Unsolved",
+  "howtoplay": "How-to-play",
   "showhowtoplay?": "Show How-to-Play?",
   "showhowtoplay_yes": "Show how-to-play",
   "showhowtoplay_no": "No, thanks",
