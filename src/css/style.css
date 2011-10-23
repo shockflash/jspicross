@@ -51,15 +51,13 @@
 
    .puzzle.preview canvas {
      border: 2px solid gray;
-     background-color: white;
+     /*background-color: #8a8a8a;*/
+     background-image: url('../images/previewbg.png');
      cursor: pointer;
    }
 
    .puzzle.preview.unsolved canvas {
-     background-image: url('../icon.png');
-     background-repeat: no-repeat;
-     background-position: center center;
-     background-color: #e3e3e3;
+     background-image: url('../images/previewunsolvedbg.png');
    }
 
    .main {
@@ -113,17 +111,17 @@
      font-family: arial;
      text-align: center;
      list-style-type: none;
-     margin: 100px 0 0 0;
+     margin: 152px 0 0 0;
      padding: 0px;
    }
 
    .content.select .buttons li {
-     margin-bottom: 20px;
+     margin-bottom: 32px;
    }
 
    .content.select .buttons li.list {
      font-size: 70px;
-     color: blue;
+     color: #859ce5;
    }
 
    .content.puzzle.field5_5 {
@@ -195,12 +193,12 @@
 
    .content .backbutton {
      position: absolute;
-     top: 30px;
-     left: 30px;
+     top: 37px;
+     left: 36px;
      font-size: 30px;
      cursor: pointer;
-     width: 150px;
-     height: 80px;
+     width: 175px;
+     height: 55px;
    }
 
    .content .backbutton.de {

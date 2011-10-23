@@ -50,7 +50,8 @@ var PuzzlePreview = function(parent, model) {
       var xMulti = this.size / this.model.getRows();
       var yMulti = this.size / this.model.getCols();
 
-      c.fillStyle = "brown"
+      //c.fillStyle = "brown";
+      c.fillStyle = "green";
 
       for (var x = 1; x <= this.model.getCols(); x++)
       {
