@@ -18,9 +18,9 @@
       table.data('y', yMax);
 
       table.html('');
-      for (var x = 1; x <= xMax; x++)  
+      for (var x = 1; x <= xMax; x++)
       {
-        var tr = $('<tr></tr>');   
+        var tr = $('<tr></tr>');
 
         for (var y = 1; y <= yMax; y++)
         {
@@ -70,7 +70,7 @@
       });
       str = str.substr(0, str.length-1);
 
-      $('.result').val(str);
+      $('.result').val('"' + str + '"');
     }
 
     $('.field5').click(function(){
