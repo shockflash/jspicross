@@ -36,11 +36,18 @@ var PuzzleController = function(main, content, puzzle) {
 
            new Sound('solved');
 
-           var solved = $('<div class="layer solved ' + $.i18n.getLanguage() + '"></div>');
-           self.content.append(solved);
-           solved.click(function() {
-             self.main.switchController(ListController, 'right');
+           // the honeycomb bg
+           var bg = $('<div class="layer solved bg" style="display: none"></div>');
+           self.content.append(bg);
+
+           bg.fadeIn(300, function() {
+             var solved = $('<div class="layer solved ' + $.i18n.getLanguage() + '"></div>');
+             self.content.append(solved);
+             solved.click(function() {
+               self.main.switchController(ListController, 'right');
+             });
            });
+
          }, 100);
      });
 
@@ -49,10 +56,16 @@ var PuzzleController = function(main, content, puzzle) {
        window.setTimeout(function() {
            new Sound('failed');
 
-           var failed = $('<div class="layer failed ' + $.i18n.getLanguage() + '"></div>');
-           self.content.append(failed);
-           failed.click(function() {
-             self.main.switchController(ListController, 'right');
+           // the honeycomb bg
+           var bg = $('<div class="layer failed bg" style="display: none"></div>');
+           self.content.append(bg);
+
+           bg.fadeIn(300, function() {
+             var failed = $('<div class="layer failed ' + $.i18n.getLanguage() + '"></div>');
+             self.content.append(failed);
+             failed.click(function() {
+               self.main.switchController(ListController, 'right');
+             });
            });
          }, 100);
      });

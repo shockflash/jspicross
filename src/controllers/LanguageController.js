@@ -16,11 +16,11 @@ var LanguageController = function(main, content) {
     var list = $('<ul class="list"></ul>');
     this.content.append(list);
 
-    var en = $('<li class="de">English</li>');
+    var en = $('<li class="en"></li>');
     en.data('language', 'en');
     list.append(en);
 
-    var de = $('<li class="de">Deutsch</li>');
+    var de = $('<li class="de"></li>');
     de.data('language', 'de');
     list.append(de);
 

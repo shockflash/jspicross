@@ -39,6 +39,9 @@
         self.drag = false;
         self.dragMarkMode = '';
       });
+
+      $('#playfieldstyle').remove();
+      $('head').append('<style id="playfieldstyle"></style>');      
     }
 
     /* Called by a field when mouse down is called.
@@ -113,6 +116,32 @@
           field.events.bind('onChecked', function(event, sender) {
             self.colHeaders[sender.getX()].check();
             self.rowHeaders[sender.getY()].check();
+
+            var percent = (self.model.getCheckedFilledCount() / self.model.getFilledCount() * 100);
+
+
+            if (percent < 10)
+              self.color = 'fff0d5';
+            else if (percent < 20) 
+              self.color = 'ffe7bc';
+            else if (percent < 30) 
+              self.color = 'ffdfa7';
+            else if (percent < 40) 
+              self.color = 'ffd790';
+            else if (percent < 50) 
+              self.color = 'ffcf7b';
+            else if (percent < 60) 
+              self.color = 'ffc867';
+            else if (percent < 70) 
+              self.color = 'ffc154';
+            else if (percent < 80) 
+              self.color = 'ffb73a';
+            else if (percent < 90) 
+              self.color = 'ffaf24';
+            else if (percent < 99) 
+              self.color = 'ffa912';
+
+            $('#playfieldstyle').html('.playfield .checked {background-color: #' + self.color + ';}');
           });
 
           this.fields[x][y] = field;

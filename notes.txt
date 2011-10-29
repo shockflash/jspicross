@@ -1,0 +1,7 @@
+Font used for futuristic look: Research Remix
+
+
+Select-Menu Links have:
+- Font-size 64 with Research Remix
+- via Alphaselect a #f67f37 bg with Gauss-unsharpen with Setting 12/12
+- When all is done, the last three links are shinked 70%

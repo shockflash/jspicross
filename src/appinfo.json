@@ -1,10 +1,11 @@
 {
-	"id": "com.hoxlom.touchpicross",
+	"id": "com.hoxlom.picrossadventure",
 	"version": "1.0.0",
 	"vendor": "HP",
 	"type": "web",
 	"main": "index.html",
-	"title": "Touch Picross Season 1",
-        "icon": "icon.png",            
+	"title": "Picross Adventure 1",
+        "icon": "icon.png",
+
 	"uiRevision": 2
 }

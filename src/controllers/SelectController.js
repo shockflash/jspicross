@@ -13,10 +13,10 @@ var SelectController = function(main, content) {
      this.content.addClass('select');
 
      var html = '<ul class="buttons ' + $.i18n.getLanguage() + '">' +
-                  '<li class="list">' + $.i18n._('puzzles') + '</li>' +
-                  '<li class="howtoplay">' + $.i18n._('howtoplay') + '</li>' +
-                  '<li class="morepuzzles">' + $.i18n._('morepuzzles') + '</li>' +
-                  '<li class="changelanguage">' + $.i18n._('changelanguage') + '</li>' +
+                  '<li class="list"></li>' +
+                  '<li class="howtoplay"></li>' +
+                  '<li class="morepuzzles"></li>' +
+                  '<li class="changelanguage"></li>' +
                 '</ul>';
      this.content.html(html);
 

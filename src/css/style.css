@@ -104,6 +104,8 @@
      background-image: url('../images/intro.png');
    }
 
+
+
    .content.select .buttons {
      font-size: 50px;
      font-weight: bold;
@@ -111,18 +113,54 @@
      font-family: arial;
      text-align: center;
      list-style-type: none;
-     margin: 152px 0 0 0;
+     margin: 160px 0 0 0;
      padding: 0px;
    }
 
    .content.select .buttons li {
-     margin-bottom: 32px;
+     background-position: top center;
+     background-repeat: no-repeat;
+     height: 96px;
    }
 
-   .content.select .buttons li.list {
-     font-size: 70px;
-     color: #859ce5;
+   .content.select .buttons.de li.list {
+     height: 128px;
+     background-image: url('../images/de/puzzles_link.png');
    }
+
+   .content.select .buttons.de li.howtoplay {
+     background-image: url('../images/de/tutorial_link.png');
+   }
+
+   .content.select .buttons.de li.morepuzzles {
+     background-image: url('../images/de/morepuzzles_link.png');
+   }
+
+   .content.select .buttons.de li.changelanguage {
+     background-image: url('../images/de/language_link.png');
+   }
+
+
+
+   .content.select .buttons.en li.list {
+     height: 128px;
+     background-image: url('../images/en/puzzles_link.png');
+   }
+
+   .content.select .buttons.en li.howtoplay {
+     background-image: url('../images/en/tutorial_link.png');
+   }
+
+   .content.select .buttons.en li.morepuzzles {
+     background-image: url('../images/en/morepuzzles_link.png');
+   }
+
+   .content.select .buttons.en li.changelanguage {
+     background-image: url('../images/en/language_link.png');
+   }
+
+
+
 
    .content.puzzle.field5_5 {
      background-image: url('../images/5_5bg.png');
@@ -143,15 +181,22 @@
      vertical-align: middle;
    }
 
-   .content.puzzle .layer.solved {
+   .content .layer {
      position: absolute;
      left: 0;
      top: 0;
      width: 1024px;
      height: 768px;
-     background-repeat: no-repeat;
-     background-position: top center;
    }
+
+   .content .layer.solved.bg {
+     background-image: url('../images/solvedbg.png');
+   }
+
+   .content .layer.failed.bg {
+     background-image: url('../images/failedbg.png');
+   }
+
 
    .content.puzzle .layer.solved.de {
      background-image: url('../images/de/solved.png');
@@ -161,15 +206,6 @@
      background-image: url('../images/en/solved.png');
    }
 
-   .content.puzzle .layer.failed {
-     position: absolute;
-     left: 0;
-     top: 0;
-     width: 1024px;
-     height: 768px;
-     background-repeat: no-repeat;
-     background-position: top center;
-   }
 
    .content.puzzle .layer.failed.de {
      background-image: url('../images/de/failed.png');
@@ -178,6 +214,7 @@
    .content.puzzle .layer.failed.en {
      background-image: url('../images/en/failed.png');
    }
+
 
    .content.puzzle .timer {
      font-family: monospace;
@@ -193,12 +230,12 @@
 
    .content .backbutton {
      position: absolute;
-     top: 37px;
+     top: 20px;
      left: 36px;
      font-size: 30px;
      cursor: pointer;
-     width: 175px;
-     height: 55px;
+     width: 145px;
+     height: 95px;
    }
 
    .content .backbutton.de {
@@ -233,21 +270,30 @@
 
    .content.language .list {
      position: absolute;
-     left: 200px;
+     left: 0;
+     right: 20px;
      top: 100px;
      color: white;
+     margin-top: 60px;
      font-family: arial;
      font-size: 60px;
      list-style-type: none;
    }
 
    .content.language .list li {
-      margin-bottom: 20px;
-      border: 1px solid gray;
-      background-color: brown;
-      padding: 6px;
+      height: 200px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
    }
 
+   .content.language .list li.de {
+      background-image: url('../images/deutsch.png');
+   }
+
+   .content.language .list li.en {
+      background-image: url('../images/english.png');
+   }
 
    .playfield {
      font-family: arial;
@@ -358,8 +404,8 @@
    }
 
    .modeswitch .button {
-     width: 85px;
-     height: 85px;
+     width: 100px;
+     height: 101px;
      margin-bottom: 20px;
      cursor: pointer;
    }

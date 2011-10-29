@@ -84,6 +84,14 @@
       return this.rowCount;
     }
 
+    this.getFilledCount = function() {
+      return this.filledCount;
+    }
+
+    this.getCheckedFilledCount = function() {
+      return this.checkedFilledCount;
+    }
+    
     this.getColHeaders = function() {
       var result = {};
 
