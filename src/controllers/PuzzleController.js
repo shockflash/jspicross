@@ -101,14 +101,14 @@ var PuzzleController = function(main, content, puzzle) {
         animation and to make it look smoother. */
      if (!getCookie('howtoplay')) {
        window.setTimeout(function() {
-         var popup = new Popup($.i18n._('showhowtoplay?'));
-         popup.addButton($.i18n._('showhowtoplay_yes'), function() {
+         var popup = new Popup($.i18n.getLanguage());
+         popup.addButton('tutorial', function() {
            popup.close();
            setCookie('howtoplay', 1);
            self.main.switchController(HowToPlayController, 'left', PuzzleController, self.puzzle);
          });
-         popup.addButton($.i18n._('showhowtoplay_no'), function() {
-           popup.close();
+         popup.addButton('togame', function() {
+           popup.fadeOut();
            setCookie('howtoplay', 1);
          });
        }, 500);

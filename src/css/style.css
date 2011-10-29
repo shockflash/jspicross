@@ -70,35 +70,56 @@
    .content {
      width: 1024px;
      height: 768px;
-
      position: relative;
    }
 
    .popup {
-     background-color: white;
-     border: 2px solid green;
-     padding: 20px;
+     display: none; /* overwritten by jquery, must keeped here*/
      width: 310px;
      position: absolute;
-     top: 300px;
-     left: 352px;
+     top: 264px;
+     left: 258px;
      font-size: 20px;
+     width: 508px;
+     height: 239px;
+     background-image: url('../images/popupbg.png');
    }
 
    .popup .buttons {
      list-style-type: none;
      padding: 0px;
-     margin: 10px 0px;
+     margin: 20px 20px;
    }
 
-   .popup .buttons li {
-     display: block;
-     width: 130px;
-     border: 1px solid red;
-     padding: 6px;
-     float: left;
-     margin-right: 10px;
+   .popup.de .buttons li.tutorial {
+     background-image: url('../images/de/popup_tutorial.png');
+     height: 34px;
+     width: 359px;
+     margin: 50px 0 0 20px;
    }
+
+   .popup.de .buttons li.togame {
+     background-image: url('../images/de/popup_topuzzle.png');
+     height: 37px;
+     width: 393px;
+     margin: 50px 0 0 20px;
+   }
+
+   .popup.en .buttons li.tutorial {
+     background-image: url('../images/en/popup_tutorial.png');
+     height: 31px;
+     width: 328px;
+     margin: 50px 0 0 20px;
+   }
+
+   .popup.en .buttons li.togame {
+     background-image: url('../images/en/popup_topuzzle.png');
+     height: 34px;
+     width: 367px;
+     margin: 50px 0 0 20px;
+   }
+
+
 
    .content.intro {
      background-image: url('../images/intro.png');
