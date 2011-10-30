@@ -10,15 +10,16 @@ var MoreController = function(main, content) {
 
   this.init = function() {
 
-     this.content.addClass('more');
+     this.content.addClass('more').addClass('text');
 
      var html = '<div class="backbutton ' + $.i18n.getLanguage() + '"></div>' +
-                '<p> Bla bla bla bla bla</p>';
+                '<div class="bg"></div>' +
+                '<div class="text"> Bla bla bla bla bla</div>';
      this.content.html(html);
 
      var self = this;
      $('.backbutton').click(function() {
-       self.main.switchController(SelectController, 'up');
+       self.main.switchController(SelectController, 'right');
      });
 
      /* we need to launch is separate, of jquery will not call the triggered

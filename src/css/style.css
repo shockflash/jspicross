@@ -267,16 +267,80 @@
      background-image: url('../images/en/back.png');
    }
 
-   .content.more p {
+   .content.text div.text {
+     position: absolute;
+     left: 20px;
+     top: 140px;
+     right: 20px;
+     bottom: 20px;
+     padding: 40px;
+     color: white;
+     font-family: arial;
+     font-size: 24px;
+   }
+
+   .content.text h1 {
+     font-size: 48px;
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     text-align: right;
+     color: white;
+     font-family: arial;
+   }
+
+   .content.text div.text table.picross td {
+     border: 1px solid white;
+     width: 26px;
+     height: 26px;
+     text-align: center;
+     vertical-align: middle;
+   }
+
+   .content.text div.text table.picross td.head {
+      background-color: gray;
+   }
+
+   .content.text div.text table.picross td.solved {
+      background-color: green;
+   }
+
+
+   .content.text div.text .next {
+     height: 95px;
+     width: 145px;
+     background-image: url(../images/de/next.png);
+     position: absolute;
+     right: 20px;
+     bottom: 20px;
+   }
+
+   .content.text div.text .back {
+     height: 95px;
+     width: 145px;
+     background-image: url(../images/de/back.png);
+     position: absolute;
+     right: 20px;
+     bottom: 20px;
+   }
+
+   .content.text div.text .puzzle1 {
+     color: blue;
+     text-decoration: underline;
+     color: #47a6ff;
+   }
+
+
+
+   .content.text div.bg {
      border: 1px solid black;
      position: absolute;
      left: 20px;
-     top: 100px;
+     top: 140px;
      right: 20px;
      bottom: 20px;
      background-color: black;
-     padding: 20px;
-     color: white;
+     opacity: 0.3;
    }
 
    .content.language .selectlang {

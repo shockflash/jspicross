@@ -30,7 +30,7 @@ var SelectController = function(main, content) {
      });
 
      $('.morepuzzles').click(function() {
-       self.main.switchController(MoreController, 'down');
+       self.main.switchController(MoreController, 'left');
      });
 
      $('.changelanguage').click(function() {
