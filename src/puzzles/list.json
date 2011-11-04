@@ -12,74 +12,51 @@
     },
 
     "3": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "xxxxx|x x x|  x  |  x  | xxx ",
+        "title_en": "T",
+        "title_de": "T"
     },
 
     "4": {
-        "field": "     xx xx     |     xx xxx    |     xx x x    | xxx x x  xxxxx| xxxxx    xx  x|  xxx      xxx |   xx     xx   |    xxx  xxx   |    xx     x   |    xx     x   |     x x  x x  |     x x xx xx |     x   x   x |      xxxxx   x|       xx x   x",
-        "title_en": "Giraffe",
-        "title_de": "Giraffe"
+        "field": "xxxxx| xxx |  x  | xxx |xxxxx",
+        "title_en": "Hourglass",
+        "title_de": "Stundenglas"
     },
 
     "5": {
-        "field": "               |      xxx  xx  |     xxxxx xx  |    xxxxxxxxx  |   xxxxxxxxxx  |  xxxxxxxxxxx  | xxxxxxxxxxxxx |x             x|x xxx xxx xxx x|x xxx xxx xxx x|x xxx xxx xxx x|x     xxx     x|x     xxx     x|x     xxx     x|xxxxxxxxxxxxxxx",
-        "title_en": "House",
-        "title_de": "Haus"
+        "field": " xxx |xx xx|x   x|xx xx| xxx ",
+        "title_en": "Ring",
+        "title_de": "Ring"
     },
 
     "6": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": " x x |x x x| x x |x x x| x x ",
+        "title_en": "Pattern",
+        "title_de": "Muster"
     },
-
-
 
     "7": {
-        "field": "xxxxxxxxxx|xxxxxxxxxx|xxxxxxxxxx|xx       x|xx x x x x|xx       x|xx x x x x|xx       x|xx x x x x|xx x     x",
-        "title_en": "Building",
-        "title_de": "Gebäuse"
+        "field": "  x  | xxx |x xxx| x x |  x  ",
+        "title_en": "Diamond",
+        "title_de": "Diamant"
     },
+
+
+
+
+
+
+
     "8": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
-    },
-    "9": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
-    },
-    "10": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
-    },
-
-    "11": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
-    },
-    "12": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "    xxx   |   x   x  |   x   x  |   x   x  |  xxxxxxx |  xxxxxxx |  xxx  xx |  xxx xxx |  xxx xxx |  xxxxxxx ",
+	"title_en": "Schloss",
+	"title_de": "Padlock"
     },
 
 
-    "13": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
-    },
-    "14": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
-    },
+
+
+
     "15": {
         "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
         "title_en": "Car",
@@ -87,79 +64,63 @@
     },
 
     "16": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "               |      xxx  xx  |     xxxxx xx  |    xxxxxxxxx  |   xxxxxxxxxx  |  xxxxxxxxxxx  | xxxxxxxxxxxxx |x             x|x xxx xxx xxx x|x xxx xxx xxx x|x xxx xxx xxx x|x     xxx     x|x     xxx     x|x     xxx     x|xxxxxxxxxxxxxxx",
+        "title_en": "House",
+        "title_de": "Haus"
     },
+
     "17": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "               |      xxx      |    xxxxxxx    |   xx x x xx   |  xx xx xx xx  | xxxxxxxxxxxxx |  x  x x x  x  |       x       |       x       |       x       |       x       |       x       |    x  x       |     xx        |               ",
+	"title_en": "Umbrella",
+	"title_de": "Schirm"
     },
+
     "18": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "    xxxxxxx    |   xxx   xxx   |   xxxxxxxxx   |   x       x   |   x x x x x   |   x       x   |   x x x x x   |   x       x   |   x x     x   |   x       x   |   x x x x x   |   x       x   |   xxxxxxxxx   |   xxxx xxxx   |    xxxxxxx    ",
+	"title_en": "Smartphone",
+	"title_de": "Smartphone"
     },
-
-
-
 
     "19": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "xx xxxxxxxx x  |xxx        xxx |xxx     xx xxxx|xxx     xx xxxx|xxx        xxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxx       xxxx|xxx         xxx|xxx  xxxxx  xxx|xxx         xxx|xxx  xxxxx  xxx|xxx         xxx|x x         x x|xxxxxxxxxxxxxxx",
+	"title_en": "Disc",
+	"title_de": "Diskette"
     },
+
     "20": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "    xxxxxxx    |   x x   x x   |  x x     x x  | x  x     x  x |xxxxxxxxxxxxxxx|x   x     x   x|x   x     x   x|x   x     x   x|x   x     x   x|x   x     x   x|xxxxxxxxxxxxxxx| x  x     x  x |  x x     x x  |   x x   x x   |    xxxxxxx    ",
+	"title_en": "Globe",
+	"title_de": "Globus"
     },
+
     "21": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "       xx      |      x  x     | x   x x  x    |x x  x  x x    |x x  x x  x  x |x x  x  x x x x|x x x     x x x|x xx  x x x x x|x   x      x  x| x    x x     x|  xx      x xx |    x x x  x   |    x     x    |    x  x  x    |     xxxxx     ",
+	"title_en": "Cactus",
+	"title_de": "Kaktus"
     },
 
     "22": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "               |x   x     x   x|xxxxx     xxxxx|xxxxx     xxxxx|xx xx x x xx xx|xx xxxxxxxxx xx|xxxxxx x xxxxxx|xx xxx x xxx xx|xx xxxxxxxxx xx|xxxxxxxxxxxxxxx|xxxxxx   xxxxxx| xxxx     xxxx | xxxx     xxxx | xxxx     xxxx | xxxx     xxxx ",
+	"title_en": "Castle",
+	"title_de": "Burg"
     },
+
     "23": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "    x     x    |     x   x     |      xxx      |  xxxxxxxxxxx  | x           x |x  xxxxxxx    x|x xxxxxxxxx x x|x xxxxxxxxx   x|x x xxxxxxx x x|x x xxxxxxx   x|x xx xxxxxx x x|x  xxxxxxx    x| x           x |  xxxxxxxxxxx  |   xx     xx   ",
+	"title_en": "TV",
+	"title_de": "Fernseher"
     },
+
     "24": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "xxxxxxxx xxxxxx|xxxxxxx xxxxxxx|xxxxxx   xxxxxx|xxxxx     xxxxx|xx xx x x xxxxx|xx xx     xxxxx|x   x     xxxxx|x   x xxx xxxxx|xx      x xx xx|xx        xx xx|xxxx      x   x|xxxxx         x|xxxxx         x|xxxxx      xxxx|xxxxx x x xxxxx",
+	"title_en": "Evil ghost",
+	"title_de": "Böser Geist"
     },
-
-
-
 
     "25": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
-    },
-    "26": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
-    },
-    "27": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
-    },
-
-    "28": {
-        "field": "               |               |               |               |      xxxxx    |     x  x  x   |    x  xx   x  |   xxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xx xx xxx xx xx|  xxxx   xxxx  |  xxxx   xxxx  |   xx     xx   ",
-        "title_en": "Car",
-        "title_de": "Auto"
+        "field": "       x       |   x x x x x   | xxx xxxxx xxx |  xx  xxx  xx  | xxxx  x  xxxx |    xxxxxxx    |     xx xx     |    xx   xx    |     xx xx     |    xxxxxxx    | xxxx  x  xxxx |  xx  xxx  xx  | xxx xxxxx xxx |   x x x x x   |       x       ",
+	"title_en": "Snowflake",
+	"title_de": "Schneeflocke"
     }
 
 
