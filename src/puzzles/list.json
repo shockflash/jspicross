@@ -70,33 +70,33 @@
     },
 
     "17": {
-        "field": "               |      xxx      |    xxxxxxx    |   xx x x xx   |  xx xx xx xx  | xxxxxxxxxxxxx |  x  x x x  x  |       x       |       x       |       x       |       x       |       x       |    x  x       |     xx        |               ",
-	"title_en": "Umbrella",
-	"title_de": "Schirm"
-    },
-
-    "18": {
         "field": "    xxxxxxx    |   xxx   xxx   |   xxxxxxxxx   |   x       x   |   x x x x x   |   x       x   |   x x x x x   |   x       x   |   x x     x   |   x       x   |   x x x x x   |   x       x   |   xxxxxxxxx   |   xxxx xxxx   |    xxxxxxx    ",
 	"title_en": "Smartphone",
 	"title_de": "Smartphone"
     },
 
-    "19": {
+    "18": {
         "field": "xx xxxxxxxx x  |xxx        xxx |xxx     xx xxxx|xxx     xx xxxx|xxx        xxxx|xxxxxxxxxxxxxxx|xxxxxxxxxxxxxxx|xxxx       xxxx|xxx         xxx|xxx  xxxxx  xxx|xxx         xxx|xxx  xxxxx  xxx|xxx         xxx|x x         x x|xxxxxxxxxxxxxxx",
 	"title_en": "Disc",
 	"title_de": "Diskette"
     },
 
-    "20": {
+    "19": {
         "field": "    xxxxxxx    |   x x   x x   |  x x     x x  | x  x     x  x |xxxxxxxxxxxxxxx|x   x     x   x|x   x     x   x|x   x     x   x|x   x     x   x|x   x     x   x|xxxxxxxxxxxxxxx| x  x     x  x |  x x     x x  |   x x   x x   |    xxxxxxx    ",
 	"title_en": "Globe",
 	"title_de": "Globus"
     },
 
+    "20": {
+        "field": "               |      xxx      |    xxxxxxx    |   xx x x xx   |  xx xx xx xx  | xxxxxxxxxxxxx |  x  x x x  x  |       x       |       x       |       x       |       x       |       x       |    x  x       |     xx        |               ",
+	"title_en": "Umbrella",
+	"title_de": "Schirm"
+    },
+
     "21": {
-        "field": "       xx      |      x  x     | x   x x  x    |x x  x  x x    |x x  x x  x  x |x x  x  x x x x|x x x     x x x|x xx  x x x x x|x   x      x  x| x    x x     x|  xx      x xx |    x x x  x   |    x     x    |    x  x  x    |     xxxxx     ",
-	"title_en": "Cactus",
-	"title_de": "Kaktus"
+        "field": "       xx      |      x  x     | x   x x  x    |x x  x  x x    |x x  x    x  x |x x  x    x x x|x x x     x x x|x xx    x x x x|x   x      x  x| x    x x     x|  xx      x xx |    x x x  x   |    x     x    |    x  x  x    |     xxxxx     ",
+        "title_en": "Cactus",
+        "title_de": "Kaktus"
     },
 
     "22": {
