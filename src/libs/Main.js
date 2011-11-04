@@ -11,8 +11,8 @@ var Main = function() {
   this.switchController = function(controller, direction, var1, var2, var3, var4) {
     var main = $('.main');
 
-    var left = 5000;
-    var top2 = 5000;
+    var left = 0;
+    var top2 = 0;
     if (this.controller)
     {
       if (direction == 'left')
