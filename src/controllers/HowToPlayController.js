@@ -112,7 +112,7 @@ var HowToPlayController = function(main, content, returnController, returnPuzzle
 
      var self = this;
      $('.backbutton').click(function() {
-       self.main.switchController(self.returnController, 'right', self.returnPuzzle);
+       self.main.switchController(self.returnController, 'up', self.returnPuzzle);
      });
 
      $('.puzzle1').click(function() {

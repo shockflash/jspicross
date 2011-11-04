@@ -26,11 +26,11 @@ var SelectController = function(main, content) {
      });
 
      $('.howtoplay').click(function() {
-       self.main.switchController(HowToPlayController, 'left', SelectController);
+       self.main.switchController(HowToPlayController, 'down', SelectController);
      });
 
      $('.morepuzzles').click(function() {
-       self.main.switchController(MoreController, 'left');
+       self.main.switchController(MoreController, 'up');
      });
 
      $('.changelanguage').click(function() {

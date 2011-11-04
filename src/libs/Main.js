@@ -11,8 +11,8 @@ var Main = function() {
   this.switchController = function(controller, direction, var1, var2, var3, var4) {
     var main = $('.main');
 
-    var left = 0;
-    var top2 = 0;
+    var left = 5000;
+    var top2 = 5000;
     if (this.controller)
     {
       if (direction == 'left')
@@ -31,8 +31,16 @@ var Main = function() {
       }
     }
 
+
+
     var newContent = $('<div class="content" style="position: absolute; left: ' + left + 'px; top: ' +  top2 + 'px;"></div>');
     main.append(newContent);
+
+    if (!this.controller)
+    {
+      main.scrollLeft(left);
+      main.scrollTop(top2);
+    }
 
     var oldController = this.controller;
 

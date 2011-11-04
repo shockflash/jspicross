@@ -19,7 +19,7 @@ var MoreController = function(main, content) {
 
      var self = this;
      $('.backbutton').click(function() {
-       self.main.switchController(SelectController, 'right');
+       self.main.switchController(SelectController, 'down');
      });
 
      /* we need to launch is separate, of jquery will not call the triggered
