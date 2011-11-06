@@ -46,11 +46,22 @@
 
 
 
-
     "8": {
+        "field": "          |xxxxxxxxxx|xx      xx|x x    x x|x  x  x  x|x   xx   x|x        x|x        x|xxxxxxxxxx|          ",
+	"title_en": "Envelope",
+	"title_de": "Briefumschlag"
+    },
+
+    "9": {
         "field": "    xxx   |   x   x  |   x   x  |   x   x  |  xxxxxxx |  xxxxxxx |  xxx  xx |  xxx xxx |  xxx xxx |  xxxxxxx ",
-	"title_en": "Schloss",
-	"title_de": "Padlock"
+	"title_en": "Padlock",
+	"title_de": "Schloss"
+    },
+
+    "10": {
+        "field": "xxxxxxxxxx|xxx xx xxx|x xxxxxx x|xxx    xxx|xx  xx  xx|x  x xx  x|xx  xx  xx|xxx    xxx|xxxxxxxxxx|xxxxxxxxxx",
+	"title_en": "Eye",
+	"title_de": "Auge"
     },
 
 
@@ -121,7 +132,20 @@
         "field": "       x       |   x x x x x   | xxx xxxxx xxx |  xx  xxx  xx  | xxxx  x  xxxx |    xxxxxxx    |     xx xx     |    xx   xx    |     xx xx     |    xxxxxxx    | xxxx  x  xxxx |  xx  xxx  xx  | xxx xxxxx xxx |   x x x x x   |       x       ",
 	"title_en": "Snowflake",
 	"title_de": "Schneeflocke"
+    },
+
+    "26": {
+        "field": "   xxx   xxx   |  xx xx xx xx  | xx x xxx x xx |xx x x x x x xx|x x x x x x x x|xx x x x x x xx|x x x x x x x x|xx x x x x x xx| xx x x x x xx |  xx x x x xx  |   xx x x xx   |    xx x xx    |     xx xx     |      xxx      |       x       ",
+	"title_en": "Hearth",
+	"title_de": "Herz"
+    },
+
+    "27": {
+        "field": "x  xx     xx   | xxxxx   xxxx  | x xxxx xxxxxx |xxx xxxxxxx  xx|xxxx xxxxxxx xx|xxxxx xxxxxx xx|xxxxxx xxxxxxxx|xxxxxxx xxxxxxx| xxxxxxx xxxxx |  xxxxxxx xxx  |   xxxxxxx x  x|    xxxxxxxx x |     xxxxx  x  |      xxx  x x |       x  x   x",
+	"title_en": "Hearth&Sword",
+	"title_de": "Herz&Schwert"
     }
+
 
 
 }
