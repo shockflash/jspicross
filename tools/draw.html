@@ -1,15 +1,43 @@
 <hml>
 <head>
   <script type="text/javascript" src="../src/libs/vendor/jquery.min.js"></script>
+
+  <style>
+    td {
+      width: 32px;
+      height: 32px;
+    }
+
+    .end {
+      background-color: gray;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    canvas {
+      position: absolute;
+      left: 700px;
+      top: 20px;
+      border: 1px solid gray;
+    }
+
+    .update {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+  </style>
 </head>
 <body>
 
   <table class="field" border="1px" cellpadding="0" cellspacing="0">
   </table>
   <br>
-  Result: <input type="text" class="result" style="width: 300px"><br>
+  Result: <input type="text" class="result" style="width: 300px"> <span class="update">Update</span><br>
   <br>
-  Fieldsize: <span class="field5">5x5</span> | <span class="field10">10x10</span> | <span class="field15">15x15</span> |  <span class="field2015">20x15</span>
+  Fieldsize: <span class="field5">5x5</span> | <span class="field10">10x10</span> | <span class="field15">15x15</span>
 
   <script>
     function draw(xMax, yMax) {
@@ -40,14 +68,36 @@
             }
             calcResult();
           });
+
         }
+
+        var td = $('<td class="end row_' + x + '" width="20px" height="20px"></td>');
+        tr.append(td);
+
+        table.append(tr);
+      }
+
+      var tr = $('<tr></tr>');
+      for (var y = 1; y <= yMax; y++)
+      {
+        var td = $('<td class="end col_' + y + '" width="20px" height="20px"></td>');
+        tr.append(td);
+
         table.append(tr);
       }
 
     }
 
     function calcResult() {
+      $('canvas').remove();
+
       var table = $('.field');
+
+      canvas = $('<canvas width="' + (table.data('x') * 10) + '" height="' + (table.data('y') * 10) + '"></canvas>');
+      c = canvas[0].getContext("2d");
+      c.fillStyle = "green";
+      $('body').append(canvas);
+
 
       var fields = {};
 
@@ -56,14 +106,71 @@
         var x = t.data('x');
         var y = t.data('y');
 
+        if (!x || !y)
+          return;
+
         if (!fields[x])
           fields[x] = [];
 
         fields[x][y] = 'x';
-        if (!t.data('set'))
+        if (!t.data('set')) {
           fields[x][y] = ' ';
+        } else {
+          c.beginPath();
+          c.rect(y * 10 - 10, x * 10 - 10, 10, 10);
+          c.closePath();
+          c.fill();
+        }
       });
 
+      /* cals row numbers-count, collect for cols*/
+      var cols = 0;
+      $.each(fields, function(key, value) {
+        var str = value.join('');
+
+        cols = str.length;
+
+        /* make all blocks 1-x wide. easier counting later */
+        for (var i = 0; i <= 40; i++)
+          str = str.replace('xx', 'x');
+
+        var count = 0;
+        for (var i = 0; i <= str.length -1; i++)
+          if (str[i] == 'x')
+            count = count + 1;
+
+        if (count > 6)
+          count = '<span style="color: red">'+count+'</span>';
+
+        $('.row_' + key).html(count);
+      });
+
+      /* cals cols numbers-count */
+      for (var y = 1; y <= cols; y++) /* works only if height == width! */
+      {
+        /* build string */
+        var str = '11';
+        for (var x = 1; x <= cols; x++)
+          str = str + fields[x][y];
+
+        /* make all blocks 1-x wide. easier counting later */
+        for (var i = 0; i <= 40; i++)
+          str = str.replace('xx', 'x');
+
+        var count = 0;
+        for (var i = 0; i <= str.length -1; i++)
+          if (str[i] == 'x')
+            count = count + 1;
+
+        if (count > 6)
+          count = '<span style="color: red">'+count+'</span>';
+
+        $('.col_' + y).html(count);
+      }
+
+
+
+      /* build string */
       var str = '';
       $.each(fields, function(key, value) {
         str = str + value.join('') + "|";
@@ -87,6 +194,60 @@
 
     $('.field2015').click(function(){
       draw(20, 15);
+    });
+
+    $('.update').click(function() {
+      var val = $('.result').val();
+
+      for (var i = 0; i <= 20;i++)
+      {
+        val = val.replace('"', '');
+        val = val.replace("\n", '');
+        val = val.replace("\r", '');
+      }
+
+      var table = $('.field');
+
+      /* clear old content */
+      $('td', table).each(function(index) {
+        var t = $(this);
+        var x = t.data('x');
+        var y = t.data('y');
+
+        if (!x || !y)
+          return;
+
+        $(this).css('backgroundColor', 'white');
+        $(this).data('set', false);
+      });
+
+
+      /* mark rows */
+      rows = val.split('|');
+      for (var y = 0; y <= rows.length-1; y++)
+      {
+        var row = rows[y];
+        for (var x = 0; x <= row.length-1; x++)
+        {
+          if (row[x] == ' ')
+            continue;
+
+          $('td', table).each(function(index) {
+            var t = $(this);
+            var x2 = t.data('x');
+            var y2 = t.data('y');
+
+            if (y +1 == x2 && x +1 == y2)
+            {
+              $(this).css('backgroundColor', 'black');
+              $(this).data('set', true);
+            }
+          });
+
+        }
+      }
+
+      calcResult();
     });
 
     draw(15, 15);
