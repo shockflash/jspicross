@@ -111,7 +111,7 @@
     },
 
     "22": {
-        "field": "               |x   x     x   x|xxxxx     xxxxx|xxxxx     xxxxx|xx xx x x xx xx|xx xxxxxxxxx xx|xxxxxx x xxxxxx|xx xxx x xxx xx|xx xxxxxxxxx xx|xxxxxxxxxxxxxxx|xxxxxx   xxxxxx| xxxx     xxxx | xxxx     xxxx | xxxx     xxxx | xxxx     xxxx ",
+        "field": "            xx |x x x       x  |xxxxx     x x x|xx xx     xxxxx|xx xx x x xx xx|xxxxxxxxxxxx xx|xx xxx x xxxxxx|xx xxx x xxx xx|xxxxxxxxxxxx xx|xx xxxxxxxxxxxx|xx xxx   xxxxxx| xxxx  x  xxxx | xxxx   x xxxx | xxxx   x xxxx | xxxx   x xxxx ",
 	"title_en": "Castle",
 	"title_de": "Burg"
     },
